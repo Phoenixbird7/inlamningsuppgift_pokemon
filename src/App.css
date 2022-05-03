@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container {
+    background-color: orange;
+    gap: 20px;
+  
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .Meny {
+    border: 2px solid blue;
+    border-radius: 5px;
+    background-color: yellow;
+    margin: 3px;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .My-collection {
+    display: flex;
+    flex: 1;
+    border: 1px solid blue;
+    border-radius: 5px;
   }
-}
+  
+  .Shop {
+    display: flex;
+    flex: 1;
+    border: 1px solid blue;
+    border-radius: 5px;
+  }
+  
+  .pokemoner {
+    border: 2px solid blue;
+    border-radius: 5px;
+    background-color: yellow;
+    margin: 3px;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .Play {
+    border: 2px solid blue;
+    border-radius: 5px;
+    background-color: yellow;
+    margin: 3px;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  
+  }
+  
+  .lista {
+    border: 3px solid blue;
+    border-radius: 3px;
+    background-color: orange;
+    margin: 1px;
+    padding: 5em;
+    min-width: 10px;
+    max-width: 800px;
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 10em;
+  }
+  
+  .img {
+    background-color: yellow;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  input[type="text"] {
+    border: 2px solid orange;
+    margin: 1em;
+    padding: 5px;
+    width: 13em;
+  }
+  
+  input[type="search"] {
+    border: 2px solid orange;
+    margin: 0em;
+    padding: 2px;
+  }
+  
+  input[type="search"]:hover {
+    background-color: blue;
+  }
+
+  .team-member {
+    border: 1px solid blue;
+    display: flex;
+  }
+
+  .Nickname-details{
+    font-family:sans-serif;
+    text-align:center;
+    border: 1px solid blue;
+    display: flex;
+  }
