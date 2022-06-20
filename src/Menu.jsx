@@ -1,11 +1,13 @@
 import { useState } from "react"
 import { data } from "./data"
+import { imageUrl } from "./imageUrl"
+//  https://github.com/Phoenixbird7/inlamningsuppgift_pokemon
+// https://past-receipt.surge.sh/
 
 export function Menu({ addTeammember }) {
   const [searchValue, setSearchValue] = useState("")
 
   const pokemons = data
-    .results
     .filter(pokemon => !searchValue || pokemon.name.includes(searchValue))
 
   return <div className="container">
@@ -30,8 +32,10 @@ export function Menu({ addTeammember }) {
               ? <p>No pokemons matched your search</p>
               : <ul>
                 {pokemons.map(p =>
-                  <p key={p.name}>{p.name}
-                    <button onClick={() => addTeammember({ name: p.name, nickname: null })}> add</button> </p>
+                  <div key={p.id} >
+                    <img src={imageUrl(p.id)} alt={p.name} />
+                    <span>{p.name}</span>
+                    <button onClick={() => addTeammember({ id: p.id, name: p.name, nickname: null })}> add</button> </div>
                 )}
               </ul>
             }

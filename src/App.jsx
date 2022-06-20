@@ -6,19 +6,24 @@ import { TeamMember } from './Nickname.jsx';
 
 function App() {
   const [teamMembers, setTeamMembers] = useState([])
+
   return <div className="pokemon">
     <Menu
-      addTeammember={teammember => setTeamMembers([...teamMembers, { ...teammember, id: teammember.length }])}
+      addTeammember={teammember => setTeamMembers([...teamMembers, teammember])}
     />
     <div className="teammembers">
-      {teamMembers.map((member, i) => 
+      <p>My team</p>
+      {teamMembers.map((member, i) =>
         <TeamMember
           name={member.name}
+          key={i}
+          id={member.id}
           nickname={member.nickname}
-          updateNickname={newNickname => setTeamMembers(teamMembers.map((m, index) => index === i ? { ...member, nickname: newNickname} : m))}
+          updateNickname={newNickname => setTeamMembers(teamMembers.map((m, index) => index === i ? { ...member, nickname: newNickname } : m))}
           removeTeamMember={() => setTeamMembers(teamMembers.filter((_, index) => i !== index))}
         />
       )}
+
     </div>
   </div>
 }
